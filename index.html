@@ -311,9 +311,28 @@
             <div class="group-title">14:25-15:00 Invited Talk</div>
             <div class="person-list">
                 <div><strong>LLM Inference at Wafer Scale: When the Model Lives in On-Chip Memory</strong></div>
-                <div>Speaker: Luo Mai (<span class="university">University of Edinburgh</span>)</div>
-                <div>Abstract: <span class="abstract">LLM inference systems are built on GPU-centric assumptions: large off-chip memory, coarse-grained kernels, and communication among a few devices. Wafer-scale accelerators break all of them, offering hundreds of thousands of cores and tens of gigabytes of distributed on-chip memory with far more bandwidth than HBM. This talk presents WaferLLM, an LLM inference system that treats inference as a distributed on-chip memory management problem: it partitions weights and the KV-cache across the wafer, parallelizes prefill and decode at wafer scale, and introduces two near-memory kernels, MeshGEMM and MeshGEMV. On a Cerebras WSE-2, WaferLLM serves a single user at 2,700 tokens/s — sub-millisecond per-token latency. I will close with ongoing work spanning on-chip and external memory tiers for interactive reasoning and test-time compute.</div>
-                <div>Biography: <span class="abstract">Luo Mai is an Associate Professor at the University of Edinburgh, where he leads the Large-Scale Machine Learning Systems Group. He builds systems for LLM training and inference, including WaferLLM (OSDI '25), ServerlessLLM (OSDI '24), and Tenplex (SOSP '24), with wafer-scale compilation and runtime work appearing at SOSP '26. He co-directs the EPSRC Centre for Doctoral Training in Machine Learning Systems and leads projects in the UK ARIA Scaling AI Compute programme. He received his PhD from Imperial College London and previously worked at Microsoft Research.</div>
+                                <div class="speaker-profile">
+                    <img
+                        class="speaker-photo"
+                        src="images/luo.jpg"
+                        alt="Luo Mai"
+                    >
+        
+                    <div class="speaker-details">
+                        <div>Speaker: Luo Mai (<span class="university">University of Edinburgh</span>)</div>
+        
+                        <div>
+                            <span class="speaker-label">Abstract:</span>
+                            <span class="abstract">LLM inference systems are built on GPU-centric assumptions: large off-chip memory, coarse-grained kernels, and communication among a few devices. Wafer-scale accelerators break all of them, offering hundreds of thousands of cores and tens of gigabytes of distributed on-chip memory with far more bandwidth than HBM. This talk presents WaferLLM, an LLM inference system that treats inference as a distributed on-chip memory management problem: it partitions weights and the KV-cache across the wafer, parallelizes prefill and decode at wafer scale, and introduces two near-memory kernels, MeshGEMM and MeshGEMV. On a Cerebras WSE-2, WaferLLM serves a single user at 2,700 tokens/s — sub-millisecond per-token latency. I will close with ongoing work spanning on-chip and external memory tiers for interactive reasoning and test-time compute.
+                        </div>
+                
+        
+                        <div>
+                            <span class="speaker-label">Biography:</span>
+                            <span class="abstract">Luo Mai is an Associate Professor at the University of Edinburgh, where he leads the Large-Scale Machine Learning Systems Group. He builds systems for LLM training and inference, including WaferLLM (OSDI '25), ServerlessLLM (OSDI '24), and Tenplex (SOSP '24), with wafer-scale compilation and runtime work appearing at SOSP '26. He co-directs the EPSRC Centre for Doctoral Training in Machine Learning Systems and leads projects in the UK ARIA Scaling AI Compute programme. He received his PhD from Imperial College London and previously worked at Microsoft Research.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -325,17 +344,62 @@
             <div class="group-title">15:30-16:20 Keynote Speech</div>
             <div class="person-list">
                 <div><strong>Two Peas in a Pod: Storage and Memory Heterogeneity in the Age of AI</strong></div>
-                <div>Speaker: Sudarsun Kannan (<span class="university">Rutgers University</span>)</div>
-                <div>Abstract: <span class="abstract">Modern servers no longer have a simple split between memory and storage. They have a continuum of unequal tiers, from HBM and DRAM to CXL-attached memory and flash, differing 10 to 100 times in latency and bandwidth, with compute increasingly embedded network, memory, and storage devices. Software abstractions for memory and storage, however, have barely changed, and today's AI challenges echo classic ones: KV-cache eviction recalls buffer-cache management; model paging, virtual memory; checkpointing, logging; pipeline stalls, prefetching. The solutions transfer too, because the principles were never device specific. In this talk, using cross-layered design as a running example, I will explore what carries over from the past decade of storage and memory systems research and where it falls short, from datacenter and HPC AI to edge cyberinfrastructure for natural-hazard monitoring. I will conclude the talk with open challenges and ongoing work toward treating storage and memory heterogeneity as two peas in a pod.</div>
-                <div>Biography: <span class="abstract">Sudarsun Kannan is an Associate Professor in the Computer Science Department at Rutgers University. His research focuses on operating system design and its intersection with computer architecture, distributed systems, and high-performance computing. His group also builds edge cyberinfrastructure for hazard-monitoring systems, including wildfire detection and mitigation. He is a recipient of the NSF CAREER Award, the Google Research Scholar Award, and the 2025 Rutgers Board of Trustees Fellowship for outstanding early-career faculty, and his group's research has received best paper and distinguished paper awards at SOSP, ASPLOS, and SPAA. He co-chaired the HotStorage '22 workshop and serves as an Associate Editor for ACM Transactions on Storage. Before joining Rutgers, he was a postdoctoral research associate at the University of Wisconsin-Madison, and he received his M.S. and Ph.D. from Georgia Tech.</div>
+                <div class="speaker-profile">
+                    <img
+                        class="speaker-photo"
+                        src="images/sudarsun"
+                        alt="Sudarsun Kannan"
+                    >
+        
+                    <div class="speaker-details">
+                        <div>Speaker: Sudarsun Kannan (<span class="university">Rutgers University</span>)</div>
+        
+                        <div>
+                            <span class="speaker-label">Abstract:</span>
+                            <span class="abstract">Modern servers no longer have a simple split between memory and storage. They have a continuum of unequal tiers, from HBM and DRAM to CXL-attached memory and flash, differing 10 to 100 times in latency and bandwidth, with compute increasingly embedded network, memory, and storage devices. Software abstractions for memory and storage, however, have barely changed, and today's AI challenges echo classic ones: KV-cache eviction recalls buffer-cache management; model paging, virtual memory; checkpointing, logging; pipeline stalls, prefetching. The solutions transfer too, because the principles were never device specific. In this talk, using cross-layered design as a running example, I will explore what carries over from the past decade of storage and memory systems research and where it falls short, from datacenter and HPC AI to edge cyberinfrastructure for natural-hazard monitoring. I will conclude the talk with open challenges and ongoing work toward treating storage and memory heterogeneity as two peas in a pod.
+                        </div>
+                
+        
+                        <div>
+                            <span class="speaker-label">Biography:</span>
+                            <span class="abstract">Sudarsun Kannan is an Associate Professor in the Computer Science Department at Rutgers University. His research focuses on operating system design and its intersection with computer architecture, distributed systems, and high-performance computing. His group also builds edge cyberinfrastructure for hazard-monitoring systems, including wildfire detection and mitigation. He is a recipient of the NSF CAREER Award, the Google Research Scholar Award, and the 2025 Rutgers Board of Trustees Fellowship for outstanding early-career faculty, and his group's research has received best paper and distinguished paper awards at SOSP, ASPLOS, and SPAA. He co-chaired the HotStorage '22 workshop and serves as an Associate Editor for ACM Transactions on Storage. Before joining Rutgers, he was a postdoctoral research associate at the University of Wisconsin-Madison, and he received his M.S. and Ph.D. from Georgia Tech.
+                        </div>
+                
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="person-group">
             <div class="group-title">16:20-16:55 Invited Talk</div>
             <div class="person-list">
-                <div><strong>TBD</strong></div>
-                <div>Speaker: Yu Liang (<span class="university">Inria Paris</span>)</div>
+                <div><strong>Co-Designing Operating Systems and Processing-in-Memory for Next-Generation Mobile Devices</strong></div>
+                
+                <div class="speaker-profile">
+                    <img
+                        class="speaker-photo"
+                        src="images/yu.jpg"
+                        alt="Yu Liang"
+                    >
+        
+                    <div class="speaker-details">
+                        <div>Speaker: Yu Liang (<span class="university">Inria Paris</span>)</div>
+        
+                        <div>
+                            <span class="speaker-label">Abstract:</span>
+                            <span class="abstract">
+                               Modern mobile devices increasingly execute data-intensive workloads such as generative AI, large language models (LLMs), augmented reality, and high-definition multimedia processing. These workloads induce substantial data movement across memory, storage, and heterogeneous processors, often dominating system energy consumption and limiting responsiveness. At the same time, long-standing inefficiencies in the Linux kernel, including memory fragmentation and hardware-agnostic OS abstractions, prevent current systems from fully exploiting emerging accelerators such as Processing in Memory (PIM). This talk presents a research direction that rethinks the boundary between operating systems and hardware to address these challenges. The central idea is to co-design OS mechanisms with architectural capabilities, aligning memory allocation, scheduling, and data-placement policies with low-level features such as TLB mappings, DRAM-controller behavior, and near-memory execution units. Such cross-layer co-design can greatly reduce unnecessary data movement, improve energy efficiency, and unlock the potential of accelerators for mobile AI workloads. By integrating systems and architecture perspectives, our research aims to establish general principles for future mobile and edge systems–ones that are efficient, scalable, and capable of fully leveraging next-generation hardware.
+                            </span>
+                        </div>
+        
+                        <div>
+                            <span class="speaker-label">Biography:</span>
+                            <span class="abstract">
+                                Yu Liang is a researcher in the Whisper team at Inria Paris, specializing in operating systems and hardware–software co-design. Her work focuses on optimizing mobile systems across the OS, memory, file system, and storage stack, with an emphasis on reducing data movement and improving energy efficiency for data-intensive workloads. Before joining Inria Paris, she was a Senior Researcher and Lecturer in the SAFARI group supervised by Prof. Onur Mutlu at ETH Zurich. She received her PhD from the City University of Hong Kong. She has published in top-tier venues such as HPCA, ASPLOS, EuroSys, USENIX ATC, and FAST, and her research has influenced commercial systems, including contributions integrated into the Linux kernel and deployed across millions of mobile devices. Her recent work explores OS–architecture co-design for emerging technologies such as Processing-in-Memory to support generative AI on mobile platforms.
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
