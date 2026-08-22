@@ -83,6 +83,52 @@
             margin-bottom: 8px;
             line-height: 1.5;
         }
+        .speaker-profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+            margin-top: 15px;
+        }
+        
+        .speaker-photo {
+            width: 150px;
+            height: 190px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .speaker-details {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .speaker-details > div {
+            margin-bottom: 8px;
+        }
+        
+        .speaker-label {
+            font-weight: 600;
+        }
+        
+        /* 手机端改为上下排列 */
+        @media (max-width: 600px) {
+            .speaker-profile {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .speaker-photo {
+                width: 140px;
+                height: 175px;
+            }
+        
+            .speaker-details {
+                width: 100%;
+            }
+        }
 
         .person-group {
             margin-bottom: 25px;
@@ -229,8 +275,35 @@
             <div class="person-list">
                 <div><strong>Rethinking the Data Path: Distributed In-Memory Key-Value Stores with DPUs</strong></div>
                 <div>Speaker: André Brinkmann (<span class="university">Saarland University</span>)</div>
-                <div>Abstract: <span class="abstract">Remote in-memory key-value stores are a cornerstone of modern distributed systems, powering caching layers, real-time analytics, and coordination services at scale. As application demands grow, so do the requirements on these systems, spanning throughput, range query support, fault tolerance, and operational simplicity. Achieving all of these simultaneously remains an open challenge, and the diversity of existing approaches reflects how differently these tradeoffs can be resolved. This talk surveys the landscape of distributed, high-performance KV store designs, from classical host-based architectures limited by the kernel network stack, to kernel-bypass techniques and RDMA-based distributed designs. We then focus on Data Processing Units (DPUs) and SmartNICs, hardware that sits directly on the network data path and processes requests without involving the host CPU or OS. We base this discussion on DPA-Store, our DPU-based KV store, illustrating how on-path processing enables low-latency request handling, stateless clients, and range query support, while avoiding the complications of RDMA-based approaches. We close with open challenges, including consistency under failure, storage hierarchy integration, and learned data structures in network-bound environments.</div>
-                <div>Biography: <span class="abstract">Prof. Dr.-Ing. André Brinkmann has been a Full Professor in the Department of Computer Science at Saarland University in Saarbrücken since 2026. Prior to this, he held the position of Full Professor of Computer Science at Johannes Gutenberg University (JGU) Mainz and served as director of the JGU Data Center. He earned his Ph.D. in Electrical Engineering from Paderborn University in 2004 and subsequently served as Assistant Professor in the Department of Computer Science at Paderborn University from 2008 to 2011. His research focuses on applying algorithm engineering to storage systems, data center management, and high-performance computing. He has authored over 150 publications in leading conferences and journals and serves as Senior Associate Editor of ACM Transactions on Storage.</div>
+                <div class="speaker-profile">
+                    <img
+                        class="speaker-photo"
+                        src="images/andre.png"
+                        alt="André Brinkmann"
+                    >
+        
+                    <div class="speaker-details">
+                        <div>
+                            <span class="speaker-label">Speaker:</span>
+                            André Brinkmann
+                            (<span class="university">Saarland University</span>)
+                        </div>
+        
+                        <div>
+                            <span class="speaker-label">Abstract:</span>
+                            <span class="abstract">
+                               Remote in-memory key-value stores are a cornerstone of modern distributed systems, powering caching layers, real-time analytics, and coordination services at scale. As application demands grow, so do the requirements on these systems, spanning throughput, range query support, fault tolerance, and operational simplicity. Achieving all of these simultaneously remains an open challenge, and the diversity of existing approaches reflects how differently these tradeoffs can be resolved. This talk surveys the landscape of distributed, high-performance KV store designs, from classical host-based architectures limited by the kernel network stack, to kernel-bypass techniques and RDMA-based distributed designs. We then focus on Data Processing Units (DPUs) and SmartNICs, hardware that sits directly on the network data path and processes requests without involving the host CPU or OS. We base this discussion on DPA-Store, our DPU-based KV store, illustrating how on-path processing enables low-latency request handling, stateless clients, and range query support, while avoiding the complications of RDMA-based approaches. We close with open challenges, including consistency under failure, storage hierarchy integration, and learned data structures in network-bound environments.
+                            </span>
+                        </div>
+        
+                        <div>
+                            <span class="speaker-label">Biography:</span>
+                            <span class="abstract">
+                                Prof. Dr.-Ing. André Brinkmann has been a Full Professor in the Department of Computer Science at Saarland University in Saarbrücken since 2026. Prior to this, he held the position of Full Professor of Computer Science at Johannes Gutenberg University (JGU) Mainz and served as director of the JGU Data Center. He earned his Ph.D. in Electrical Engineering from Paderborn University in 2004 and subsequently served as Assistant Professor in the Department of Computer Science at Paderborn University from 2008 to 2011. His research focuses on applying algorithm engineering to storage systems, data center management, and high-performance computing. He has authored over 150 publications in leading conferences and journals and serves as Senior Associate Editor of ACM Transactions on Storage.
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
